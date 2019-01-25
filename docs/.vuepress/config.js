@@ -16,6 +16,7 @@ module.exports = {
       {text: '前端基础', link: '/accumulate/' },
       {text: '算法题库', link: '/algorithm/'}
     ],
+    // sidebar: auto,
     sidebar:{
       '/accumulate/': [
         {
@@ -29,14 +30,17 @@ module.exports = {
           title: 'css',
           collapsable: true,
           children: [
-            'css/animation'
+            'css/animation',
+            'css/bfc',
+            'css/maodian'
           ]
         },
         {
           title: '打包配置',
           collapsable: true,
           children: [
-            'configuration/gulp'
+            'configuration/gulp',
+            'configuration/webpack'
           ]
         }
       ],
