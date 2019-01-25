@@ -32,6 +32,7 @@ module.exports = {
           children: [
             'css/animation',
             'css/bfc',
+            'css/dot-lines',
             'css/maodian'
           ]
         },
@@ -40,7 +41,8 @@ module.exports = {
           collapsable: true,
           children: [
             'configuration/gulp',
-            'configuration/webpack'
+            'configuration/webpack',
+            'configuration/webpack-vue2'
           ]
         }
       ],
