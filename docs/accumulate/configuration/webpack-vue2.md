@@ -302,7 +302,8 @@ export default {
 </style>
 ```
 当执行 npm start 后，发现终端报错：
-![1efa8f03837f24f335c34105be0ec913.png](evernotecid://457479B4-69A2-490F-9145-4981FF917E86/appyinxiangcom/19092618/ENResource/p70)
+
+![](https://user-gold-cdn.xitu.io/2019/1/28/168927b01c694fb9?w=1680&h=506&f=png&s=643880)
 
 不能处理图片，因此安装处理图片的相关loader。
 
@@ -322,14 +323,16 @@ rule:[
 ...
 ```
 执行npm start后也会将图片文件进行打包：
-![175896b10cff485e1003771d6c2be8ed.png](evernotecid://457479B4-69A2-490F-9145-4981FF917E86/appyinxiangcom/19092618/ENResource/p71)
+
+![](https://user-gold-cdn.xitu.io/2019/1/28/168927bfd179ba99?w=1682&h=550&f=png&s=649929)
 
 #### 处理ES6、ES7语法
 安装相关依赖包
 > npm install babel-core babel-loader babel-preset-env babel-preset-latest --save-dev
 
 并在webpack.config.js文件中进行配置：
-![1a078ac30eefc637f15643b93e7635a8.png](evernotecid://457479B4-69A2-490F-9145-4981FF917E86/appyinxiangcom/19092618/ENResource/p72)
+
+![](https://user-gold-cdn.xitu.io/2019/1/28/168927c9dfbe4e04?w=1180&h=576&f=png&s=274031)
 
   
   

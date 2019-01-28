@@ -1,9 +1,9 @@
 # webpack学习笔记
 
-## 1、什么是webpack
+#### 1、什么是webpack
 模块打包工具 ：分析项目结构，找到JS模块以及其它的一些浏览器不能直接运行的语言（less等），并将其打包为合适的格式以供浏览器使用。
 
-## 2、webpack核心概念
+#### 2、webpack核心概念
 主要有 6 部分：
 * Entry : 输入入口，webpack构建第一步从这里开始
 * Moudle ：一个模块对应一个文件，从entry 开始递归找到所有依赖的模块
@@ -12,10 +12,10 @@
 * Plugin：扩展插件，在 Webpack 构建流程中的特定时机注入扩展逻辑来改变构建结果或做你想要的事情
 * Output：输出，在 Webpack 经过一系列处理并得出最终想要的代码后输出结果
 
-## 3、webpack 的工作流程
+#### 3、webpack 的工作流程
 项目当作一个整体，通过给定的主文件，webpack从主文件开始找到项目所有依赖的文件，再用loaders处理这些文件，最后打包为一个浏览器可识别的javascript文件。
 
-## 4、执行流程
+#### 4、执行流程
 1. 递归解析 entry 依赖的所有 module；
 2. 每找到一个module，根据配置的loader去找相应的转换规则；
 3. 对module进行转换后再解析当前module所依赖的module；
@@ -23,31 +23,31 @@
 5. webpack将所有chunk 转换成文件输出，并在一定时候执行plugin逻辑。
 ![](https://user-gold-cdn.xitu.io/2019/1/25/168844ec783d6879?w=1600&h=728&f=png&s=227446)
 
-## 5、配置（https://segmentfault.com/a/1190000006178770#articleHeader2）
-#### 1、全局安装webpack
+#### 5、配置（[https://segmentfault.com/a/1190000006178770#articleHeader2](https://segmentfault.com/a/1190000006178770#articleHeader2)）
+##### 1、全局安装webpack
 $ sudo npm install -g webpack (全局安装）
 
-#### 2、创建package.json文件夹
+##### 2、创建package.json文件夹
 $ npm init
 在终端中使用命令可以自动创建这个package.json文件。输入这个命令后，终端会问你一系列诸如项目名称，项目描述，作者等信息，不过不用担心，如果你不准备在npm中发布你的模块，这些问题的答案都不重要，回车默认即可
 
-#### 3、在项目中安装Webpack作为依赖包npm install --save-dev webpack
+##### 3、在项目中安装Webpack作为依赖包npm install --save-dev webpack
 
-#### 4、创建两个文件夹
+##### 4、创建两个文件夹
 app文件夹和public文件夹，app文件夹用来存放原始数据和我们将写的JavaScript模块，public文件夹用来存放之后供浏览器读取的文件（包括使用webpack打包生成的js文件以及一个index.html文件）。接下来我们再创建三个文件:
 * index.html --放在public文件夹中;
 * Greeter.js-- 放在app文件夹中;
 * main.js-- 放在app文件夹中;
 
-#### 5、在index.html中写入代码
+##### 5、在index.html中写入代码
 目的在于引入打包后的js文件（这里我们先把之后打包后的js文件命名为bundle.js）
 ![](https://user-gold-cdn.xitu.io/2019/1/25/168845254dd021fe?w=1030&h=558&f=png&s=263583)
 
-#### 6、在Greeter.js中写入代码
+##### 6、在Greeter.js中写入代码
 定义一个返回包含问候信息的html元素的函数,并依据CommonJS规范导出这个函数为一个模块
 ![](https://user-gold-cdn.xitu.io/2019/1/25/1688452dc87fd3af?w=1438&h=344&f=png&s=260907)
 
-#### 7、在main.js中写入代码
+##### 7、在main.js中写入代码
 用以把Greeter模块返回的节点插入页面
 ![](https://user-gold-cdn.xitu.io/2019/1/25/1688453632d053a9?w=1638&h=214&f=png&s=181545)
 
@@ -59,13 +59,13 @@ app文件夹和public文件夹，app文件夹用来存放原始数据和我们�
 
 ![](https://user-gold-cdn.xitu.io/2019/1/25/1688455f9ce6add9?w=1594&h=548&f=png&s=1082655)
 
-## 7、更快捷的执行打包任务
+#### 7、更快捷的执行打包任务
 可以通过在package.json中对scripts对象进行相关设置即可，设置方法如下：
 
 ![](https://user-gold-cdn.xitu.io/2019/1/25/16884590685803af?w=1100&h=556&f=png&s=545160)
 配置后执行npm start即可进行快速打包
 
-## 8、webpack其他强大功能
+#### 8、webpack其他强大功能
 （1）source maps
 source maps 提供编译文件和源文件的对应。
 配置后，webpack 就可以在打包时为我们生成`source maps`，这为我们提供了一种对应编译文件和源文件的方法，使得编译后的代码可读性更高，也更容易调试。在webpack的配置文件中配置`source maps`，需要配置 `devtool`:
@@ -133,7 +133,7 @@ plugins和loaders的区别：
 * Hot Module Replacement 允许你在修改组件代码后，自动刷新实时预览修改后的效果。
 * HtmlWebpackPlugin 依据一个简单的index.html模板，生成一个自动引用你打包后的JS文件的新index.html
 
-## 问题记录
+#### 问题记录
 1、在安装时提示没有权限
 
 ![](https://user-gold-cdn.xitu.io/2019/1/25/168845faedce6e66?w=1250&h=610&f=png&s=1088739)

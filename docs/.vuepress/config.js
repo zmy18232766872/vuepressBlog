@@ -14,7 +14,8 @@ module.exports = {
   themeConfig: {
     nav:[ // 导航栏配置
       {text: '前端基础', link: '/accumulate/' },
-      {text: '算法题库', link: '/algorithm/'}
+      {text: '算法题库', link: '/algorithm/'},
+      {text: '关于我', link: '/aboutme/'}
     ],
     // sidebar: auto,
     sidebar:{
@@ -48,12 +49,12 @@ module.exports = {
       ],
       '/algorithm/': [
         {
-          title: '/',
+          title: 'two-stack-to-row',
           collapsable: false,
-          children: [
-          ]
+          children: []
         }
-      ]
+      ],
+      '/aboutme/': []
     },
     sidebarDepth: 2
   }
