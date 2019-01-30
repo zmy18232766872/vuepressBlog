@@ -48,11 +48,7 @@ module.exports = {
         }
       ],
       '/algorithm/': [
-        {
-          title: 'two-stack-to-row',
-          collapsable: false,
-          children: []
-        }
+        // '/two-stack-to-row/'
       ],
       '/aboutme/': []
     },
